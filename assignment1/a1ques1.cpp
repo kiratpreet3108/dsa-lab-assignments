@@ -18,8 +18,9 @@ void create(int arr[], int &n){
 }
 void display(int arr[], int &n){
     for (int i=0; i<n; i++){
-        cout<<arr[i]<<endl;
+        cout<<arr[i];
     }
+    cout<<endl;
 }
 void insert_an_element(int arr[], int &n){
     int k;
@@ -30,25 +31,27 @@ void insert_an_element(int arr[], int &n){
     cin>>a;
     for (int i=n ; i>=k; i--){
         arr[i]=arr[i-1];
-        arr[k-1]=a;
     }
+    arr[k-1]=a;
     n++;
-    for (int i=0; i<n+1; i++){
-        cout<<arr[i]<<endl;
+    for (int i=0; i<n; i++){
+        cout<<arr[i];
     }
+    cout<<endl;
 }
 void delete_an_element(int arr[], int &n){
     int k;
     cout<<"enter the position where element has to be deleted";
     cin>>k;
    
-        for (int i=k; i<n-1; i++){
+        for (int i=k; i<n; i++){
             arr[i]=arr[i+1];
         }
         n--;
-        for (int i=0; i<n-1; i++){
-            cout<<arr[i]<<endl;
+        for (int i=0; i<n; i++){
+            cout<<arr[i];
         }
+        cout<<endl;
 }
 void linear_search(int arr[], int &n){
     int a;
@@ -57,7 +60,7 @@ void linear_search(int arr[], int &n){
     bool found=false;
     for (int i=0 ; i<n; i++){
         if (arr[i]==a){
-            cout<<"the element is found at" <<i<< "th position";
+            cout<<"the element is found at " <<i+1<< " th position";
             found =true;
         }
     }
