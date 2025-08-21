@@ -18,7 +18,7 @@ void create(int arr[], int &n){
 }
 void display(int arr[], int &n){
     for (int i=0; i<n; i++){
-        cout<<arr[i];
+        cout<<arr[i]<<endl;
     }
 }
 void insert_an_element(int arr[], int &n){
@@ -34,22 +34,20 @@ void insert_an_element(int arr[], int &n){
     }
     n++;
     for (int i=0; i<n+1; i++){
-        cout<<arr[i];
+        cout<<arr[i]<<endl;
     }
 }
 void delete_an_element(int arr[], int &n){
     int k;
     cout<<"enter the position where element has to be deleted";
     cin>>k;
-    int a;
-        cout<<"enter the number u want to insert"<<endl;
-        cin>>a;
+   
         for (int i=k; i<n-1; i++){
             arr[i]=arr[i+1];
         }
         n--;
         for (int i=0; i<n-1; i++){
-            cout<<arr[i];
+            cout<<arr[i]<<endl;
         }
 }
 void linear_search(int arr[], int &n){
